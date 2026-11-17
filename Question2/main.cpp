@@ -1,27 +1,23 @@
 #include <iostream>
+#include "DArray.h"
 using namespace std;
 
-class DArray {
-private:
-    int* arr{};
-    int m_size{};
-    int m_capacity{};
+int main() {
+    DArray darr1;
 
-public:
-    DArray();
- 
-    ~DArray();
+    for (int j{}; j < 15; ++j) {
+        darr1.push_back(j * 2);
+        cout << darr1.size() << '\t'
+             << darr1.capacity() << endl;
+    }
 
-    void push_back(int);
+    cout << darr1 << endl;
 
-    int size() const;
-    int capacity() const;
+    for (int j{}; j < 15; ++j) {
+        darr1[j] += j;
+    }
 
-    int& operator[](int);
-    const int& operator[](int) const;
+    cout << darr1 << endl;
 
-    bool operator==(const DArray&) const;
-};
-
-ostream& operator<<(ostream&, const DArray&);
-#endif
+    return 0;
+}
