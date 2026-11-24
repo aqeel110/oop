@@ -9,8 +9,8 @@ void base::print()const{
       cout<<h1<<endl;
       }
 
-derived1::derived1(int a,int b):base( a){
-     h2=b;
+derived1::derived1(int x,int y):base( x){
+     h2=y;
 }
 
 void derived1::print()const{
@@ -21,8 +21,8 @@ derived1::~derived1(){
     base::~base();
     cout<<"Derived1 destructor "<<endl;
 }
-    derived2::derived2(int a ,int b,int c):derived1(a,b){
-         h3=c; 
+    derived2::derived2(int x ,int y,int z):derived1(x,y){
+         h3=z; 
     }
        void derived2::print()const{
       derived1::print();
