@@ -34,7 +34,7 @@ derived1::~derived1()
        void derived2::print()const
 {
       derived1::print();
-       cout<<d2_variable1<<endl;
+       cout<<h2<<endl;
       }
         derived2::~derived2()
 {
